@@ -3,15 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kettunen.io/categories/</loc>
+    <loc>https://kettunen.io/post/</loc>
+    <lastmod>2020-03-29T22:02:41+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kettunen.io/tags/</loc>
+    <loc>https://kettunen.io/post/reawakening/</loc>
+    <lastmod>2020-03-29T22:02:41+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://kettunen.io/</loc>
+    <lastmod>2020-03-29T22:02:41+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/</loc>
   </url>
   
 </urlset>

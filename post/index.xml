@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Topi Kettunen</title>
+    <link>https://kettunen.io/post/</link>
+    <description>Recent content in Posts on Topi Kettunen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/topikettunen&#34;&gt;Topi Kettunen&lt;/a&gt; 2020</copyright>
+    <lastBuildDate>Sun, 29 Mar 2020 22:02:41 +0300</lastBuildDate>
+    
+	<atom:link href="https://kettunen.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reawakening habit of writing during times of quarantine</title>
+      <link>https://kettunen.io/post/reawakening/</link>
+      <pubDate>Sun, 29 Mar 2020 22:02:41 +0300</pubDate>
+      
+      <guid>https://kettunen.io/post/reawakening/</guid>
+      <description>A couple of years ago I had a good habit of writing semi-regularly about various topics that were interesting to me. These included the first impressions of different technologies, my opinions on different topics, etc. Unfortunately, time passed and I began to write less and less and recently I&amp;rsquo;ve gotten out of the habit completely. Which is a shame in many ways since I&amp;rsquo;ve always felt writing to be greatly therapeutic.</description>
+    </item>
+    
+  </channel>
+</rss>

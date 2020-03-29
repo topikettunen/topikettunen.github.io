@@ -1,14 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topi Kettunen</title>
     <link>https://kettunen.io/</link>
     <description>Recent content on Topi Kettunen</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <generator>Hugo - gohugo.io</generator>
+    <language>en</language>
+    <contact>topi@kettunen.io</contact>
+    <copyright>&copy; <a href="https://github.com/topikettunen">Topi Kettunen</a> 2020</copyright>
     
-	<atom:link href="https://kettunen.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://kettunen.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Posts</title>
+      <link>https://kettunen.io/post/</link>
+      <pubDate>Sun, 29 Mar 2020 22:02:41 +0300</pubDate>
+      <author>Topi Kettunen</author>
+      <guid>https://kettunen.io/post/</guid>
+      <description></description>
+      
+      <content></content>
+      
+    </item>
     
   </channel>
 </rss>
