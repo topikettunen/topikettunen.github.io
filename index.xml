@@ -1,26 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ramblings from Topi Kettunen</title>
-    <link>https://kettunen.io/</link>
-    <description>Recent content on Ramblings from Topi Kettunen</description>
-    <generator>Hugo - gohugo.io</generator>
-    <language>en</language>
-    <contact>topi@kettunen.io</contact>
-    <copyright>&copy; <a href="https://github.com/topikettunen">Topi Kettunen</a> 2020</copyright>
-    
-        <atom:link href="https://kettunen.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <title>Cogitations of Topi</title>
+    <link>/</link>
+    <description>Recent content on Cogitations of Topi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jan 2021 18:03:57 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>https://kettunen.io/post/</link>
-      <pubDate>Wed, 18 Nov 2020 10:19:29 +0200</pubDate>
-      <author>Topi Kettunen</author>
-      <guid>https://kettunen.io/post/</guid>
-      <description></description>
+      <title>Reawakening Long Lost Habit (or Forming a New One)</title>
+      <link>/post/reawakening-long-lost-habit/</link>
+      <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <content></content>
-      
+      <guid>/post/reawakening-long-lost-habit/</guid>
+      <description>A couple of years ago, I had a good habit of writing semi-regularly about various exciting topics. Unfortunately, time passed, and I began to write less and less, and recently I&amp;rsquo;ve gotten out of the habit altogether. This is a shame in many ways since I&amp;rsquo;ve always felt writing to be immensely therapeutic.
+At the time of writing, this world is also in a very odd place. Most of the countries worldwide are quarantined due to COVID-19, and people are staying in their homes.</description>
     </item>
     
   </channel>

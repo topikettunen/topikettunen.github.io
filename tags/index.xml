@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Ramblings from Topi Kettunen</title>
-    <link>https://kettunen.io/tags/</link>
-    <description>Recent content in Tags on Ramblings from Topi Kettunen</description>
+    <title>Tags on Cogitations of Topi</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/topikettunen&#34;&gt;Topi Kettunen&lt;/a&gt; 2020</copyright>
-    <lastBuildDate>Wed, 18 Nov 2020 10:19:29 +0200</lastBuildDate><atom:link href="https://kettunen.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jan 2021 18:03:57 +0200</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>introduction</title>
-      <link>https://kettunen.io/tags/introduction/</link>
-      <pubDate>Wed, 18 Nov 2020 10:19:29 +0200</pubDate>
+      <title>habit</title>
+      <link>/tags/habit/</link>
+      <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/introduction/</guid>
+      <guid>/tags/habit/</guid>
       <description></description>
     </item>
     
