@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cogitations of Topi</title>
-    <link>/tags/</link>
+    <link>/tags.html</link>
     <description>Recent content in Tags on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Jan 2021 18:03:57 +0200</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>composing</title>
-      <link>/tags/composing/</link>
+      <link>/tags/composing.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>/tags/composing/</guid>
+      <guid>/tags/composing.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>habit</title>
-      <link>/tags/habit/</link>
+      <link>/tags/habit.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>/tags/habit/</guid>
+      <guid>/tags/habit.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>/tags/programming/</link>
+      <link>/tags/programming.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>/tags/programming/</guid>
+      <guid>/tags/programming.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>writing</title>
-      <link>/tags/writing/</link>
+      <link>/tags/writing.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>/tags/writing/</guid>
+      <guid>/tags/writing.html</guid>
       <description></description>
     </item>
     
