@@ -2,9 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Cogitations of Topi</title>
-    <link>/categories.html</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jan 2021 18:03:57 +0200</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>practice</title>
+      <link>/categories/practice/</link>
+      <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
+      
+      <guid>/categories/practice/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
