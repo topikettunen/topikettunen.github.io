@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jan 2021 18:03:57 +0200</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>freebsd</title>
+      <link>/categories/freebsd/</link>
+      <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
+      
+      <guid>/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>practice</title>
       <link>/categories/practice/</link>
