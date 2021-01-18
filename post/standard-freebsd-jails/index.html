@@ -20,7 +20,7 @@ Jails in FreeBSD is by no means a new tool (introduced in 4." />
 Jails in FreeBSD is by no means a new tool (introduced in 4.">
 <meta itemprop="datePublished" content="2021-01-17T20:20:26+02:00" />
 <meta itemprop="dateModified" content="2021-01-17T20:20:26+02:00" />
-<meta itemprop="wordCount" content="834">
+<meta itemprop="wordCount" content="838">
 
 
 
@@ -199,6 +199,9 @@ $ sudo sh -c &quot;zfs send zroot/vm/tmpl/12.2@complete | zfs receive zroot/vm/j
 <blockquote>
 <p><strong>Note</strong>: These configurations is for very bare-bones jail, e.g. without any
 mounts or advanced networking. Further configurations are discussed in future posts.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: Refer to <code>rc.conf(5)</code>.</p>
 </blockquote>
 <pre><code>cloned_interfaces=&quot;lo0&quot;
 
