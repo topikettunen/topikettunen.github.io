@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Cogitations of Topi</title>
-    <link>https://kettunen.io/post/</link>
+    <link>https://kettunen.io/post.html</link>
     <description>Recent content in Posts on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,20 +10,20 @@
     <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="https://kettunen.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating Comfy FreeBSD Jails Using Standard Tools</title>
-      <link>https://kettunen.io/post/standard-freebsd-jails/</link>
+      <link>https://kettunen.io/2021/01/17/standard-freebsd-jails.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/post/standard-freebsd-jails/</guid>
+      <guid>https://kettunen.io/2021/01/17/standard-freebsd-jails.html</guid>
       <description>Docker has stormed into software development in recent years. While the concepts behind it are powerful and useful, similar tools have been used in systems for decades. FreeBSD&amp;rsquo;s jails in one of those tools which build upon even older chroot(2) To put it shortly, with these tools, you can make a safe environment separated from the rest of the system.
 Jails in FreeBSD is by no means a new tool (introduced in 4.</description>
     </item>
     
     <item>
       <title>Reawakening Long Lost Habit (or Forming a New One)</title>
-      <link>https://kettunen.io/post/reawakening-long-lost-habit/</link>
+      <link>https://kettunen.io/2021/01/10/reawakening-long-lost-habit.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/post/reawakening-long-lost-habit/</guid>
+      <guid>https://kettunen.io/2021/01/10/reawakening-long-lost-habit.html</guid>
       <description>A couple of years ago, I had a good habit of writing semi-regularly about various exciting topics. Unfortunately, time passed, and I began to write less and less, and recently I&amp;rsquo;ve gotten out of the habit altogether. This is a shame in many ways since I&amp;rsquo;ve always felt writing to be immensely therapeutic.
 At the time of writing, this world is also in a very odd place. Most of the countries worldwide are quarantined due to COVID-19, and people are staying in their homes.</description>
     </item>

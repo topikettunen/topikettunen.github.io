@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cogitations of Topi</title>
-    <link>https://kettunen.io/tags/</link>
+    <link>https://kettunen.io/tags.html</link>
     <description>Recent content in Tags on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,91 +10,91 @@
     <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="https://kettunen.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>administration</title>
-      <link>https://kettunen.io/tags/administration/</link>
+      <link>https://kettunen.io/tags/administration.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/administration/</guid>
+      <guid>https://kettunen.io/tags/administration.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>freebsd</title>
-      <link>https://kettunen.io/tags/freebsd/</link>
+      <link>https://kettunen.io/tags/freebsd.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/freebsd/</guid>
+      <guid>https://kettunen.io/tags/freebsd.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>jail</title>
-      <link>https://kettunen.io/tags/jail/</link>
+      <link>https://kettunen.io/tags/jail.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/jail/</guid>
+      <guid>https://kettunen.io/tags/jail.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>learning</title>
-      <link>https://kettunen.io/tags/learning/</link>
+      <link>https://kettunen.io/tags/learning.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/learning/</guid>
+      <guid>https://kettunen.io/tags/learning.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>system</title>
-      <link>https://kettunen.io/tags/system/</link>
+      <link>https://kettunen.io/tags/system.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/system/</guid>
+      <guid>https://kettunen.io/tags/system.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>virtualization</title>
-      <link>https://kettunen.io/tags/virtualization/</link>
+      <link>https://kettunen.io/tags/virtualization.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/virtualization/</guid>
+      <guid>https://kettunen.io/tags/virtualization.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>composing</title>
-      <link>https://kettunen.io/tags/composing/</link>
+      <link>https://kettunen.io/tags/composing.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/composing/</guid>
+      <guid>https://kettunen.io/tags/composing.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>habit</title>
-      <link>https://kettunen.io/tags/habit/</link>
+      <link>https://kettunen.io/tags/habit.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/habit/</guid>
+      <guid>https://kettunen.io/tags/habit.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>https://kettunen.io/tags/programming/</link>
+      <link>https://kettunen.io/tags/programming.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/programming/</guid>
+      <guid>https://kettunen.io/tags/programming.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>writing</title>
-      <link>https://kettunen.io/tags/writing/</link>
+      <link>https://kettunen.io/tags/writing.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/tags/writing/</guid>
+      <guid>https://kettunen.io/tags/writing.html</guid>
       <description></description>
     </item>
     

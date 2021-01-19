@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Cogitations of Topi</title>
-    <link>https://kettunen.io/categories/</link>
+    <link>https://kettunen.io/categories.html</link>
     <description>Recent content in Categories on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,19 +10,19 @@
     <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="https://kettunen.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>freebsd</title>
-      <link>https://kettunen.io/categories/freebsd/</link>
+      <link>https://kettunen.io/categories/freebsd.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/categories/freebsd/</guid>
+      <guid>https://kettunen.io/categories/freebsd.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>practice</title>
-      <link>https://kettunen.io/categories/practice/</link>
+      <link>https://kettunen.io/categories/practice.html</link>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
-      <guid>https://kettunen.io/categories/practice/</guid>
+      <guid>https://kettunen.io/categories/practice.html</guid>
       <description></description>
     </item>
     

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>freebsd on Cogitations of Topi</title>
-    <link>https://kettunen.io/categories/freebsd/</link>
+    <link>https://kettunen.io/categories/freebsd.html</link>
     <description>Recent content in freebsd on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,10 +10,10 @@
     <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="https://kettunen.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating Comfy FreeBSD Jails Using Standard Tools</title>
-      <link>https://kettunen.io/post/standard-freebsd-jails/</link>
+      <link>https://kettunen.io/2021/01/17/standard-freebsd-jails.html</link>
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
-      <guid>https://kettunen.io/post/standard-freebsd-jails/</guid>
+      <guid>https://kettunen.io/2021/01/17/standard-freebsd-jails.html</guid>
       <description>Docker has stormed into software development in recent years. While the concepts behind it are powerful and useful, similar tools have been used in systems for decades. FreeBSD&amp;rsquo;s jails in one of those tools which build upon even older chroot(2) To put it shortly, with these tools, you can make a safe environment separated from the rest of the system.
 Jails in FreeBSD is by no means a new tool (introduced in 4.</description>
     </item>
