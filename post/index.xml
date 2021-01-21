@@ -14,8 +14,193 @@
       <pubDate>Sun, 17 Jan 2021 20:20:26 +0200</pubDate>
       
       <guid>https://kettunen.io/2021/01/17/standard-freebsd-jails.html</guid>
-      <description>Docker has stormed into software development in recent years. While the concepts behind it are powerful and useful, similar tools have been used in systems for decades. FreeBSD&amp;rsquo;s jails in one of those tools which build upon even older chroot(2) To put it shortly, with these tools, you can make a safe environment separated from the rest of the system.
-Jails in FreeBSD is by no means a new tool (introduced in 4.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt; has stormed into software development in
+recent years. While the concepts behind it are powerful and useful, similar
+tools have been used in systems for decades. FreeBSD&amp;rsquo;s
+&lt;a href=&#34;https://www.freebsd.org/doc/handbook/jails.html&#34;&gt;jails&lt;/a&gt; in one of those tools
+which build upon even older &lt;code&gt;chroot(2)&lt;/code&gt; To put it shortly, with these tools, you
+can make a safe environment separated from the rest of the system.&lt;/p&gt;
+&lt;p&gt;Jails in FreeBSD is by no means a new tool (introduced in 4.X), but for a reason
+or another, I haven&amp;rsquo;t used them that often, which is a shame since they are so
+powerful. So I wanted to explore this concept in a concise and summarized
+manner.&lt;/p&gt;
+&lt;h2 id=&#34;templates&#34;&gt;Templates&lt;/h2&gt;
+&lt;p&gt;ZFS datasets are a great way of creating templates for jails since, after the
+template creation, you can easily create new jails with &lt;code&gt;zfs clone&lt;/code&gt; or &lt;code&gt;zfs send/receive&lt;/code&gt;. Typically people tend to divide jails to complete and service
+jails, where the former usually resembles a real FreeBSD system, and the latter
+is often dedicated to applications/services. I&amp;rsquo;ll cover complete jails for now.&lt;/p&gt;
+&lt;p&gt;The creation of templates starts with creating a dataset for your jail and
+template. Here I&amp;rsquo;ll make a new dataset for the base installation of FreeBSD
+12.2.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo zfs create -o mountpoint=/vm zroot/vm
+$ sudo zfs create zroot/vm/tmpl
+$ sudo zfs create zroot/vm/tmpl/12.2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that, fetch the base installation itself:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ fetch ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/12.2-RELEASE/base.txz
+# Fetch all the necessary stuff for your template, e.g. lib32 if needed
+$ sudo tar -xJvpf base.txz -C /vm/tmpl/12.2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that you should write a minimum viable &lt;code&gt;/etc/rc.conf&lt;/code&gt; for the template:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo emacs /vm/tmpl/12.2/etc/rc.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Refer to &lt;code&gt;rc.conf(5)&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;# Start or stop services
+sendmail_enable=&amp;quot;NO&amp;quot;
+sendmail_submit_enable=&amp;quot;NO&amp;quot;
+sendmail_outbound_enable=&amp;quot;NO&amp;quot;
+sendmail_msp_queue_enable=&amp;quot;NO&amp;quot;
+syslogd_flags=&amp;quot;-ss&amp;quot;
+cron_flags=&amp;quot;-J 60&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also disable some unnecessary jobs for jails:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo emacs /vm/tmpl/12.2/etc/periodic.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Refer to &lt;code&gt;periodic.conf(5)&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;# No output for successful script runs.
+daily_show_success=&amp;quot;NO&amp;quot;
+weekly_show_success=&amp;quot;NO&amp;quot;
+monthly_show_success=&amp;quot;NO&amp;quot;
+security_show_success=&amp;quot;NO&amp;quot;
+   
+# Output to log files which are rotated by default.
+daily_output=&amp;quot;/var/log/daily.log&amp;quot;
+daily_status_security_output=&amp;quot;/var/log/daily.log&amp;quot;
+weekly_output=&amp;quot;/var/log/weekly.log&amp;quot;
+weekly_status_security_output=&amp;quot;/var/log/weekly.log&amp;quot;
+monthly_output=&amp;quot;/var/log/monthly.log&amp;quot;
+monthly_status_security_output=&amp;quot;/var/log/monthly.log&amp;quot;
+   
+# No need for those without sendmail
+daily_clean_hoststat_enable=&amp;quot;NO&amp;quot;
+daily_status_mail_rejects_enable=&amp;quot;NO&amp;quot;
+daily_status_mailq_enable=&amp;quot;NO&amp;quot;
+daily_queuerun_enable=&amp;quot;NO&amp;quot;
+   
+# Host does those
+daily_status_disks_enable=&amp;quot;NO&amp;quot;
+daily_status_zfs_zpool_list_enable=&amp;quot;NO&amp;quot;
+daily_status_network_enable=&amp;quot;NO&amp;quot;
+daily_status_uptime_enable=&amp;quot;NO&amp;quot;
+daily_ntpd_leapfile_enable=&amp;quot;NO&amp;quot;
+weekly_locate_enable=&amp;quot;NO&amp;quot;
+weekly_whatis_enable=&amp;quot;NO&amp;quot;
+security_status_chksetuid_enable=&amp;quot;NO&amp;quot;
+security_status_neggrpperm_enable=&amp;quot;NO&amp;quot;
+security_status_chkuid0_enable=&amp;quot;NO&amp;quot;
+security_status_ipfwdenied_enable=&amp;quot;NO&amp;quot;
+security_status_ipfdenied_enable=&amp;quot;NO&amp;quot;
+security_status_ipfwlimit_enable=&amp;quot;NO&amp;quot;
+security_status_ipf6denied_enable=&amp;quot;NO&amp;quot;
+security_status_tcpwrap_enable=&amp;quot;NO&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You also might want to enable ports in your jail:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo mkdir /vm/tmpl/12.2/usr/ports
+$ sudo mkdir -p /vm/tmpl/12.2/var/ports/{distfiles,packages}
+$ sudo emacs /vm/tmpl/12.2/etc/make.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;WRKDIRPREFIX = /var/ports
+DISTDIR = /var/ports/distfiles
+PACKAGES = /var/ports/packages
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Apply system updates to the template:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo freebsd-update -b /vm/tmpl/12.2 fetch install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Lastly, take a snapshot:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo zfs snapshot zroot/vm/tmpl/12.2@complete
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This creates a snapshot of &lt;code&gt;zroot/vm/tmpl/12.2&lt;/code&gt; named &lt;code&gt;complete&lt;/code&gt;. You can then check your current snapshots with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo zfs list -t snapshot
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-jails-from-the-template&#34;&gt;Creating Jails from the Template&lt;/h2&gt;
+&lt;p&gt;Now you should be able to create a new jail based on that snapshot. You can do
+it either with &lt;code&gt;zfs clone&lt;/code&gt; or &lt;code&gt;zfs send/receive&lt;/code&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Difference Between the Two&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A clone is a writable volume or file system whose initial contents are the
+same as the dataset from which it was created. As with snapshots, creating a
+clone is nearly instantaneous and initially consumes no additional disk
+space. In addition, you can snapshot a clone.&amp;rdquo; [1]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The zfs send command creates a stream representation of a snapshot that is
+written to standard output. By default, a full stream is generated. You can
+redirect the output to a file or to a different system. The zfs receive
+command creates a snapshot whose contents are specified in the stream that is
+provided on standard input. If a full stream is received, a new file system is
+created as well. You can send ZFS snapshot data and receive ZFS snapshot data
+and file systems with these commands. See the examples in the next section.&amp;rdquo;
+[2]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo zfs clone zroot/vm/tmpl/12.2@complete zroot/vm/jail1
+
+# OR
+
+$ sudo sh -c &amp;quot;zfs send zroot/vm/tmpl/12.2@complete | zfs receive zroot/vm/jail1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;jail-configurations&#34;&gt;Jail Configurations&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: These configurations is for very bare-bones jail, e.g. without any
+mounts or advanced networking. Further configurations are discussed in future posts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;# /etc/rc.conf
+
+cloned_interfaces=&amp;quot;lo0&amp;quot;
+
+# PF is used for NAT and port forwarding.
+pf_enable=&amp;quot;YES&amp;quot;
+pflog_enable=&amp;quot;YES&amp;quot;
+
+jail_enable=&amp;quot;YES&amp;quot;
+jail_list=&amp;quot;jail1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Refer to &lt;code&gt;jail.conf(5)&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;# /etc/jail.conf
+
+exec.start = &amp;quot;/bin/sh /etc/rc&amp;quot;;
+exec.stop = &amp;quot;/bin/sh /etc/rc.shutdown&amp;quot;;
+exec.clean;
+mount.devfs;
+
+host.hostname = $name;
+path = &amp;quot;/vm/$name&amp;quot;;
+exec.consolelog = &amp;quot;/var/log/jail_${name}_console.log&amp;quot;;
+exec.prestart = &amp;quot;cp /etc/resolv.conf $path/etc&amp;quot;;
+exec.poststop = &amp;quot;rm $path/etc/resolv.conf&amp;quot;;
+
+jail1 {
+        ip4.addr = &amp;quot;lo0|127.1.1.1/32&amp;quot;;
+        ip6.addr = &amp;quot;lo0|fd00:1:1:1::1/64&amp;quot;;
+        allow.chflags;
+        allow.raw_sockets;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# /etc/hosts
+
+...
+
+127.1.1.1 jail1
+fd00:1:1:1::1 jail1
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;jail-management&#34;&gt;Jail Management&lt;/h2&gt;
+&lt;p&gt;Start/stop all jails.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo service jail start
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Start/stop a specific jail(s).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo service jail start jail1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Log in to jail.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo jexec jail1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Exec a command on a jail.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo jexec jail1 uname -a
+FreeBSD jail1 12.2-RELEASE FreeBSD 12.2-RELEASE r366954 GENERIC  amd64
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;List running jails.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ jls
+   JID  IP Address      Hostname                      Path
+     3  127.1.1.1       jail1                         /vm/jail1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So that&amp;rsquo;s how you can spin up a simple restricted environment on your FreeBSD
+system. There are still lots of things to cover in this topic, e.g., in-depth
+networking and configurations. But I think those deserve their own posts. So see
+you soon!&lt;/p&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+&lt;p&gt;[1] Overview of ZFS Clones: &lt;a href=&#34;https://docs.oracle.com/cd/E19253-01/819-5461/gbcxz/index.html&#34;&gt;https://docs.oracle.com/cd/E19253-01/819-5461/gbcxz/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] Sending and Receiving ZFS Data: &lt;a href=&#34;https://docs.oracle.com/cd/E18752_01/html/819-5461/gbchx.html&#34;&gt;https://docs.oracle.com/cd/E18752_01/html/819-5461/gbchx.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.freebsd.org/doc/handbook/jails.html&#34;&gt;FreeBSD Jails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -24,8 +209,83 @@ Jails in FreeBSD is by no means a new tool (introduced in 4.</description>
       <pubDate>Sun, 10 Jan 2021 18:03:57 +0200</pubDate>
       
       <guid>https://kettunen.io/2021/01/10/reawakening-long-lost-habit.html</guid>
-      <description>A couple of years ago, I had a good habit of writing semi-regularly about various exciting topics. Unfortunately, time passed, and I began to write less and less, and recently I&amp;rsquo;ve gotten out of the habit altogether. This is a shame in many ways since I&amp;rsquo;ve always felt writing to be immensely therapeutic.
-At the time of writing, this world is also in a very odd place. Most of the countries worldwide are quarantined due to COVID-19, and people are staying in their homes.</description>
+      <description>&lt;p&gt;A couple of years ago, I had a good habit of writing semi-regularly about
+various exciting topics. Unfortunately, time passed, and I began to write less
+and less, and recently I&amp;rsquo;ve gotten out of the habit altogether. This is a shame
+in many ways since I&amp;rsquo;ve always felt writing to be immensely therapeutic.&lt;/p&gt;
+&lt;p&gt;At the time of writing, this world is also in a very odd place. Most of the
+countries worldwide are quarantined due to COVID-19, and people are staying in
+their homes. Yours truly included! So as a way to pass the the time during these
+times, I&amp;rsquo;m trying to reawaken this habit.&lt;/p&gt;
+&lt;p&gt;Habitual writing has been on my mind for a long time, especially since it has
+been so present in my life before. I&amp;rsquo;ve also somehow lost a few other healthy
+habits, which lately have made me think about how I can reawaken them in my
+day-to-day life. Healthy practices that come to mind that I&amp;rsquo;ve lost would
+definitely be workouts and meditation. Although you could argue that the lost
+habit of working out is mainly related to the current difficult times, I&amp;rsquo;m not
+too worried. That I believe that eventually, when the world calms down in terms
+of this pandemic, I can relearn that habit quite quickly. But losing the regular
+practice of meditation is really a shame, in my opinion. Similar to working out,
+meditation has been playing a big part in my life for years.&lt;/p&gt;
+&lt;p&gt;Even though my meditation practices have been irregular lately, the earlier
+&amp;ldquo;hard work&amp;rdquo; has definitely helped me in my everyday life. But recently, I&amp;rsquo;ve
+started thinking about how I could relearn this habit. I&amp;rsquo;ve learned that at
+least in my own case best way to learn habit has definitely been doing something
+often but not in an excessive amount. So in meditation, this was easy. Start by
+5 or 10 minutes (which is nothing, and everyone can find time for this) and just
+do it the same time and place every day. Current times supported in relearning
+this since people are mostly working remotely, so it is easy to start your day
+with this practice. With these simple steps, I feel like that I&amp;rsquo;ve been able to
+reawaken this practice that was once very present in my life.&lt;/p&gt;
+&lt;p&gt;This got me thinking about utilizing a similar approach in some other practices
+that I&amp;rsquo;ve forgotten. The practices that came to mind were music and
+writing. Although some could argue that these are more or less the same
+thing. For some reason, I&amp;rsquo;ve had a real hard time picking up my instruments and
+writing some new music during the pandemic. I believe that many others have the
+same feelings in their own area of interest. I don&amp;rsquo;t know the cause for this;
+maybe the constant staring at the same four walls for over a year is the
+culprit. Who knows? A similar thing has also happened in my writing.&lt;/p&gt;
+&lt;p&gt;What really got me wanting to reawaken these habits was when I stumbled upon
+&lt;a href=&#34;https://www.dreamsongs.com/Bio.html&#34;&gt;Richard P. Gabriel&amp;rsquo;s&lt;/a&gt; poetry. Gabriel is a
+legendary Lisp programmer. As a Lisp programmer myself, I&amp;rsquo;m always interested in
+what other like-minded people are up to. Gabriel started a project of &lt;a href=&#34;https://www.dreamsongs.com/DailyPoems.html&#34;&gt;writing
+one poem a day on March 18, 2000&lt;/a&gt; to
+end a lengthy poetry-writing slump. Gabriel agrees that he is not necessarily a
+great poet, even though many could argue that, but I think that is
+non-essential. While forming this kind of habit, you don&amp;rsquo;t necessarily need to
+be the new Robert Frost. But since writing poetry (or anything) is a technical
+skill, constant practice is bound to help you in your journey. I stumbled upon a
+similar approach while reading &lt;a href=&#34;https://www.amazon.com/Writing-Better-Lyrics-Pat-Pattison/dp/1582975779&#34;&gt;Pat Pattison&amp;rsquo;s Writing Better
+Lyrics&lt;/a&gt;,
+where he talked about &amp;ldquo;daily object writing&amp;rdquo; in terms of getting better at
+writing. Pattison also noted that forming a habit is the big thing in this,
+which will eventually result in getting better at writing.&lt;/p&gt;
+&lt;p&gt;This approach is more or less similar to how I learned the healthy habit of
+regular meditation. How could I apply a similar approach to my composing and
+writing? Knowing myself, I cannot do this kind of creative work sporadically (or
+waiting for the creative slump to end), or I&amp;rsquo;ll never do it. If I tried to write
+one piece and post every day, I feel that doing both daily would be a little bit
+excessive (mainly timewise). So I need to find a healthy balance in practice and
+not making it over-encumbered.&lt;/p&gt;
+&lt;p&gt;In my case, I believe that some time-boxed, very focused practice on something
+works the best. So what I&amp;rsquo;m intending to do is that I&amp;rsquo;ll focus on a period (half
+an hour, an hour or so) on the given task, whether it is composing, writing, or
+programming (another healthy habit that I practice which thankfully haven&amp;rsquo;t been
+lost, but I always feel I could do more of it). I&amp;rsquo;ll set a healthy goal for this
+time-box, so I don&amp;rsquo;t expect to write some new groundbreaking sonata, some
+earth-shattering blog post, or the next big open source project. I&amp;rsquo;ll just want
+to do something in these fields regularly to hone my skills in the given area. I
+also understand that since I&amp;rsquo;m trying to work on multiple habits, I might not
+always have time to do everything. That&amp;rsquo;s okay. I can most likely squeeze in a
+smaller session so that you have at least some practice. Or if I just simply
+cannot do anything, that&amp;rsquo;s fine too. I just don&amp;rsquo;t want to see myself doing
+something excessively one day and then slacking off the next day since &amp;ldquo;I did so
+much yesterday&amp;rdquo; (learned from Pattison).&lt;/p&gt;
+&lt;p&gt;Productivity overall has been really close to my heart, even though I
+occasionally lack significantly in that area. But maybe with small steps,
+everyone can benefit somehow in a slight boost of their own productivity.&lt;/p&gt;
+&lt;p&gt;Or just procrastinate&amp;hellip; As long as you&amp;rsquo;re happy.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
