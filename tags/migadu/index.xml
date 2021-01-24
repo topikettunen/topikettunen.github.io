@@ -59,8 +59,7 @@ understanding, this only handles the authentication to your mail and
 provider localhost-only endpoints to IMAP4/SMTP. Then you can configure
 your mail client of choice with these new endpoints.&lt;/p&gt;
 &lt;p&gt;Interesting solution, and at least for me, it seems to work and doesn&amp;rsquo;t
-hinder my workflow that much. Albeit this conveniently enables vendor
-lock-in, which is in my books is not very good. Still, I&amp;rsquo;m pretty happy
+hinder my workflow that much. Still, I&amp;rsquo;m pretty happy
 with their product and decided to migrate my emails to there.&lt;/p&gt;
 &lt;h2 id=&#34;honorable-mention-migadu&#34;&gt;Honorable Mention: Migadu&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.migadu.com/index.html&#34;&gt;Migadu&lt;/a&gt;
@@ -79,10 +78,9 @@ just was a little bit too expensive at that point.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;FastMail at first seemed like a good fit, but due to Australia&amp;rsquo;s
 legislation, it just doesn&amp;rsquo;t work for me. ProtonMail overall seems like
-a pretty exciting provider, at least on paper. But the vendor lock-in
-aspect with their bridge is pretty odd, although I understand why they
-have done it. Still, this seemed minor to me, so I&amp;rsquo;ll continue to use
-their service at least for a while.&lt;/p&gt;
+a pretty exciting provider, at least on paper and overall in practice too.
+Service seemed to suite me, so I&amp;rsquo;ll continue to use their service at
+least for a while.&lt;/p&gt;
 </description>
     </item>
     
