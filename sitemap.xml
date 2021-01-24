@@ -3,17 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kettunen.io/tags/administration.html</loc>
-    <lastmod>2021-01-17T20:20:26+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kettunen.io/categories.html</loc>
-    <lastmod>2021-01-17T20:20:26+02:00</lastmod>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://kettunen.io/</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/email.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/categories/email.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/fastmail.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/google.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/gsuite.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/imap.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/2021/01/24/leap-of-faith-in-email-providers.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/migadu.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/post.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/protonmail.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/provider.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/smtp.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags.html</loc>
+    <lastmod>2021-01-24T13:35:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kettunen.io/tags/administration.html</loc>
     <lastmod>2021-01-17T20:20:26+02:00</lastmod>
   </url>
   
@@ -43,17 +108,7 @@
   </url>
   
   <url>
-    <loc>https://kettunen.io/post.html</loc>
-    <lastmod>2021-01-17T20:20:26+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kettunen.io/tags/system.html</loc>
-    <lastmod>2021-01-17T20:20:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kettunen.io/tags.html</loc>
     <lastmod>2021-01-17T20:20:26+02:00</lastmod>
   </url>
   

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Except as noted, this work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 17 Jan 2021 20:20:26 +0200</lastBuildDate><atom:link href="https://kettunen.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jan 2021 13:35:00 +0200</lastBuildDate><atom:link href="https://kettunen.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>email</title>
+      <link>https://kettunen.io/categories/email.html</link>
+      <pubDate>Sun, 24 Jan 2021 13:35:00 +0200</pubDate>
+      
+      <guid>https://kettunen.io/categories/email.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>freebsd</title>
       <link>https://kettunen.io/categories/freebsd.html</link>
