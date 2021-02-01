@@ -273,9 +273,9 @@ you soon!&lt;/p&gt;
 &lt;p&gt;[1] Overview of ZFS Clones: &lt;a href=&#34;https://docs.oracle.com/cd/E19253-01/819-5461/gbcxz/index.html&#34;&gt;https://docs.oracle.com/cd/E19253-01/819-5461/gbcxz/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;[2] Sending and Receiving ZFS Data: &lt;a href=&#34;https://docs.oracle.com/cd/E18752_01/html/819-5461/gbchx.html&#34;&gt;https://docs.oracle.com/cd/E18752_01/html/819-5461/gbchx.html&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.freebsd.org/doc/handbook/jails.html&#34;&gt;FreeBSD Jails&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
