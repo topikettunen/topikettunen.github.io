@@ -11,6 +11,8 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     max-width: 500px;
+
+    -webkit-text-size-adjust: 100%;
 }
 
 header > h3 > a {
@@ -38,6 +40,21 @@ p.pp {
     text-indent: 0.35in;
     text-align: justify;
 }
+
+pre {
+    overflow-x: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+pre {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
 
 code {
     display: inline-block;
@@ -135,3 +152,4 @@ footer > p {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
