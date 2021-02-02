@@ -39,10 +39,6 @@ p.pp {
     text-align: justify;
 }
 
-pre {
-    overflow-x: auto;
-}
-
 code {
     display: inline-block;
     font-family: monospace;
@@ -139,14 +135,3 @@ footer > p {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-
- /* Hide scrollbar for Chrome, Safari and Opera */
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-pre {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
