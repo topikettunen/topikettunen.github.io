@@ -7,7 +7,137 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Except as noted, this work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 24 Jan 2021 13:35:00 +0200</lastBuildDate><atom:link href="https://kettunen.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Feb 2021 20:25:35 +0200</lastBuildDate><atom:link href="https://kettunen.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contemplating Web Analytics</title>
+      <link>https://kettunen.io/2021/02/02/contemplating-web-analytics.html</link>
+      <pubDate>Tue, 02 Feb 2021 20:25:35 +0200</pubDate>
+      
+      <guid>https://kettunen.io/2021/02/02/contemplating-web-analytics.html</guid>
+      <description>&lt;p&gt;I started to rekindle my, unfortunately, lost writing habit a couple of
+weeks ago. I set up Google Analytics for this page mainly due to its
+ease of use to see simple analytics. I was only interested in visitor
+count and possibly from what source my readers are coming. Google
+Analytics is a massive tool with massive amounts of data going into
+it. I tried to restrict this collection as much as possible so it suits
+my personal blog&amp;rsquo;s needs.&lt;/p&gt;
+&lt;p&gt;Then my page rose to the front page of Hacker News, and it started to
+get a lot of traction. Suddenly there were thousands of readers coming
+every day to my pesky little page with just a few posts as I was
+following the visitor counts rising in my Google Analytics view. That
+got me thinking about the ethics of this kind of tracking. Which then
+ended up me deleting my account and data from it.&lt;/p&gt;
+&lt;h2 id=&#34;discomfort-of-tracking&#34;&gt;Discomfort of Tracking&lt;/h2&gt;
+&lt;p&gt;Before I deleted my data and account from Google Analytics, I first
+looked for different alternatives. I stumbled upon many other
+privacy-oriented and GDPR-compliant analytics platforms, which at first
+seemed promising. Also, having good options for ever prevalent Google
+Analytics is a great thing. But despite these features, they don&amp;rsquo;t
+remove the uneasiness what mining your users&#39; data causes. We are
+talking about spying here. Thankfully there are now some restrictions
+regarding personally identifiable information (PII), at least in the
+GDPR, limiting the shadiness of this quite a lot. But that brings new
+issues in handling this kind of information since you need to be sure
+that your software doesn&amp;rsquo;t leak this information. Thankfully also
+opting-out completely from collecting PII in your software is an
+option.&lt;/p&gt;
+&lt;p&gt;I understand why people might want to add at least simplistic tracking
+to their sites since it can provide useful information about your
+content, and companies can see how users use their site, and the list
+goes on. Especially when you combine Google Analytics, or similar
+analytics tool, to ads, companies can reap significant benefits from
+this kind of tracking. But 9 of 10 sites shouldn&amp;rsquo;t need this. You could
+argue that most administrators use this tracking only for dopamine fix
+and don&amp;rsquo;t utilize the tracked data. Even though they might use it
+somehow, how they inform the user? I dare to say that information about
+data usage is almost always written in some shallow boilerplate text or
+no way at all.&lt;/p&gt;
+&lt;h2 id=&#34;informed-consent&#34;&gt;Informed Consent&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gdpr-info.eu/&#34;&gt;GDPR&lt;/a&gt; highlights mainly four things about data usage:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It enables EU citizens to have the final say on how their data is used.
+If your company any way handles PIIs, there are tighter restrictions
+on how these can be handled.
+Companies can store/use data only if the person consents to it.
+User has rights to their data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Consent is the crucial part here since I believe that many sites lack on
+this front. There has been a lot of discussion about what should is
+considered consent. &lt;a href=&#34;https://gdpr-info.eu/art-6-gdpr/&#34;&gt;GDPR Art. 6.1(f)&lt;/a&gt;
+says that &amp;ldquo;processing is necessary for the purposes of the legitimate
+interests pursued by the controller or by a third party&amp;rdquo;. Now legitimate
+interest is relatively shallow and &lt;a href=&#34;https://www.dataguidance.com/news/germany-dpas-issue-statements-consent-cookies-and-google-analytics%C2%A0&#34;&gt;quite a few authorities in Germany,
+for example, consider that third-party analytics do not fall under
+&amp;ldquo;legitimate
+interest&amp;rdquo;&lt;/a&gt;. You
+can utilize consent management platforms to ensure you have user&amp;rsquo;s
+consent before you drop the tracking code in your page. But this then
+raises the question of what can be considered consent.&lt;/p&gt;
+&lt;p&gt;Drew DeVault wrote a great post about &lt;a href=&#34;https://drewdevault.com/2020/12/04/Analytics-and-informed-consent.html&#34;&gt;web analytics and informed
+consent&lt;/a&gt;. Informed
+consent is a principle from healthcare, but it still can offer
+significant elements to be utilized, especially in technology and
+privacy. Drew split up the essential elements of informed consent in
+tracking to these three points:&lt;/p&gt;
+&lt;p&gt;Disclosure of the nature and purpose of the research and its implications (risks and benefits) for the participant, and the confidentiality of the collected information.
+An adequate understanding of these facts on the part of the participant, requiring an accessible explanation in lay terms and an assessment of understanding.
+The participant must exercise voluntary agreement, without coercion or
+fear of repercussions (e.g. not being allowed to use your website).&lt;/p&gt;
+&lt;p&gt;Considering these essential elements of informed consent, we can agree
+that most sites that do tracking don&amp;rsquo;t follow these guidelines.&lt;/p&gt;
+&lt;p&gt;Thankfully trivial tracker blocking is supported already in many
+browsers, which makes this issue slightly more bearable, and also,
+you&amp;rsquo;re able to download external tools to do it. But still, this kind of
+approach is pretty upside down.&lt;/p&gt;
+&lt;h2 id=&#34;all-kinds-of-cookies&#34;&gt;All Kinds of Cookies&lt;/h2&gt;
+&lt;p&gt;Unfortunately, ad-tech companies have tried to make blocking these
+harder and harder by constantly evolving these cookies to &lt;a href=&#34;https://home.sophos.com/en-us/security-news/2019/supercookies.aspx&#34;&gt;evercookies,
+supercookies,
+etc.&lt;/a&gt;
+The way these have worked is that trackers have stored these harder to
+detect and delete cookies in different obscure places in the browser,
+like Flash storage or HSTS flags. Evercookies were a big thing in early
+2010 since many sites were using Flash and Silverlight, and those were
+very exploitable. Today those technologies aren&amp;rsquo;t used anymore, but that
+doesn&amp;rsquo;t mean the evolution of cookies has stopped. Supercookies, on the
+other hand, work on the network level of your service provider.&lt;/p&gt;
+&lt;p&gt;Thankfully lately, for example, &lt;a href=&#34;https://blog.mozilla.org/security/2021/01/26/supercookie-protections/&#34;&gt;Firefox has been able to start tackling
+these&lt;/a&gt;. In
+that post, the Firefox team discloses what they had to do to take some
+actions against this, and it is wild. They had to re-architect the whole
+connection handling in the browser, which was first made to increase
+user experience by reducing overhead to eliminate these pesky
+cache-based cookies.&lt;/p&gt;
+&lt;p&gt;Still, &lt;a href=&#34;https://home.sophos.com/en-us/security-news/2019/supercookies.aspx&#34;&gt;browser
+fingerprinting&lt;/a&gt;
+could be considered the evilest cookie of them all. Browser
+fingerprinting identifies everything it can from your system. Like some
+cookies, this does have some real use cases, e.g., preventing fraud in
+financial institutions. Still, mostly this is just another intrusive way
+to track people. Thankfully some modern browsers offer at least some
+ways to avoid this, but not a full-fledged solution (other than
+disposable systems).&lt;/p&gt;
+&lt;h2 id=&#34;future-of-cookies&#34;&gt;Future of cookies&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.axios.com/google-privacy-friendly-substitute-cookies-test-05c2c28e-77f1-4921-9a99-1ef0c009b064.html&#34;&gt;Lately, there has been some news about privacy-friendly substitutes to
+cookies by tech
+giants.&lt;/a&gt;
+Cookies have been a relatively significant issue privacy-wise for
+decades, and since the ad industry is so large, finding a replacement
+for these have been hard. So only time will tell. I believe that we
+cannot get rid of cookies entirely in the near future. They might change
+into something else, maybe this kind of API utilizing machine learning
+analyzing user data. Which I don&amp;rsquo;t know is better or worse. So cannot
+wait! &lt;em&gt;tin-foil hat tightens&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So what is the conclusion here? Probably nothing. Recently started
+small-time blogger just got scared from big numbers coming into his site
+collecting all kinds of data which ended up him stopping this kind of
+action at least in his site. Since for most users/sites, this kind of
+tracking is just a silly monkey-get-banana dopamine fix.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t track unless you need to and if you do, inform it thoroughly.&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Leap of Faith in Email Providers</title>
       <link>https://kettunen.io/2021/01/24/leap-of-faith-in-email-providers.html</link>
