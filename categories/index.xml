@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Cogitations of Topi</title>
-    <link>https://kettunen.io/categories.html</link>
+    <link>https://kettunen.io/categories/</link>
     <description>Recent content in Categories on Cogitations of Topi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
