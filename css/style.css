@@ -17,10 +17,6 @@ body {
 header {
     font-family: monospace;
     text-align: center;
-    padding-bottom: 1em;
-}
-
-header > h1 > a {
 }
 
 #post-title {
@@ -188,3 +184,11 @@ footer > p {
     text-decoration: none;
 }
 
+#paginator {
+    text-align: center;
+}
+
+#latest-post-list {
+    display: flex;
+    justify-content: space-around;
+}
