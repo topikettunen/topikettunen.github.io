@@ -21,8 +21,6 @@ header {
 }
 
 header > h1 > a {
-  color: inherit;
-  text-decoration: none;
 }
 
 #post-title {
@@ -179,3 +177,14 @@ footer > p {
     display: flex;
     justify-content: space-between;
 }
+
+#header-bar > h1 {
+    font-size: x-large;
+    margin: 0;
+}
+
+#header-bar > h1 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
