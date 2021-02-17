@@ -5,17 +5,16 @@ body {
     padding-right: 0.25in;
     background-color: white;
     color: black;
-    font-family: serif;
-    font-size: larger;
+    font-family: palatino;
+    font-size: large;
     line-height: 1.2em;
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
 
     -webkit-text-size-adjust: 100%;
 }
 
 header {
-    font-family: monospace;
     text-align: center;
 }
 
@@ -134,7 +133,6 @@ blockquote {
 }
 
 main > div {
-    font-family: monospace;
 }
 
 .comments {
@@ -170,8 +168,6 @@ footer > p {
 }
 
 #header-bar {
-    display: flex;
-    justify-content: space-between;
 }
 
 #header-bar > h1 {
@@ -188,7 +184,14 @@ footer > p {
     text-align: center;
 }
 
-#latest-post-list {
-    display: flex;
-    justify-content: space-around;
+#view-more {
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
 }
