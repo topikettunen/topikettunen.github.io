@@ -4,11 +4,11 @@ body {
     padding-left: 0.25in;
     padding-right: 0.25in;
     background-color: white;
-    color: black;
-    font-family: palatino;
-    font-size: large;
-    line-height: 1.2em;
-    max-width: 500px;
+    color: #444444;
+    font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+    font-size: larger;
+    line-height: 1.6;
+    max-width: 600px;
     margin: auto;
 
     -webkit-text-size-adjust: 100%;

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Topi Kettunen</title>
-    <link>https://topikettunen.com/</link>
-    <description>Recent content on Topi Kettunen</description>
+    <title>Posts on Topi Kettunen</title>
+    <link>https://topikettunen.com/posts/</link>
+    <description>Recent content in Posts on Topi Kettunen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Except as noted, this work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 16 Feb 2021 17:16:56 +0200</lastBuildDate><atom:link href="https://topikettunen.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 17:16:56 +0200</lastBuildDate><atom:link href="https://topikettunen.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Extravagancy in Tech</title>
       <link>https://topikettunen.com/posts/extravagancy-in-tech/</link>
@@ -410,47 +410,6 @@ much yesterday&amp;rdquo; (learned from Pattison).&lt;/p&gt;
 occasionally lack significantly in that area. But maybe with small steps,
 everyone can benefit somehow in a slight boost of their own productivity.&lt;/p&gt;
 &lt;p&gt;Or just procrastinate&amp;hellip; As long as you&amp;rsquo;re happy.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://topikettunen.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://topikettunen.com/about/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://topikettunen.com/about/pic.jpg&#34; alt=&#34;Me&#34; width=&#34;100%&#34; height=&#34;100%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m a DevOps consultant at &lt;a href=&#34;https://polarsquad.com&#34;&gt;Polar Squad&lt;/a&gt; and
-a software engineer. I&amp;rsquo;ve been working on topics such as operating
-systems, distributed systems, networking, and virtualization. In the
-wild, I mostly enjoy working with a wide variety of different developer
-tools &amp;ndash; compilers, profilers, debuggers &amp;ndash; or digital signal processing
-in the form of audio plug-ins.&lt;/p&gt;
-&lt;p&gt;Alongside that, whenever I have time, I try to thrive in different
-creative endeavors like writing and music. Currently writing mainly my
-incoherent rambles down to somewhere (see this blog) and music in almost
-all of its forms, all the way from composing, playing, sound design to
-mixing and mastering.&lt;/p&gt;
-&lt;p&gt;I approach programming in a similar manner to how a composer might
-approach a new piece, a poet a new poet, or a painter a new painting
-since there can be so much beauty and art hidden in this bastard child
-of logic, individuality, and creativity that we call programming.&lt;/p&gt;
-&lt;p&gt;At the time of writing this, I don&amp;rsquo;t have a set schedule for my posts,
-although I&amp;rsquo;m working on it. I would want to post at least weekly but
-preferably more. I had a good writing habit couple of years ago, but for
-some reason or another, I lost it, so now I&amp;rsquo;m relearning this practice.&lt;/p&gt;
-&lt;p&gt;Questions, comments, ideas are always welcome! The best way to get a
-hold of me is via the following links:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;mailto:mail@topikettunen.com&#34;&gt;Mail&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://linkedin.com/in/topikettunen&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;LinkedIn is mainly used for work related purposes in my case and is
-not in active use.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Some of my programming is also available on &lt;a href=&#34;https://github.com/topikettunen&#34;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Also, feel free to subscribe to my &lt;a href=&#34;https://topikettunen.com/index.xml&#34;&gt;RSS&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
