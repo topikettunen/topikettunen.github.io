@@ -7,7 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Except as noted, this work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 16 Feb 2021 17:16:56 +0200</lastBuildDate><atom:link href="https://topikettunen.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 19:45:00 +0200</lastBuildDate><atom:link href="https://topikettunen.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Reading</title>
+      <link>https://topikettunen.com/posts/code-reading/</link>
+      <pubDate>Thu, 18 Feb 2021 19:45:00 +0200</pubDate>
+      
+      <guid>https://topikettunen.com/posts/code-reading/</guid>
+      <description>&lt;p&gt;Code reading has always been this activity that I&amp;rsquo;ve just done without
+really giving any thought to it. But despite this, now, when I look back
+at this habit, I see it is immensely beneficial. This habit caught my
+attention when I was reading Peter Seibel&amp;rsquo;s book Coders at Work, in
+which there is a section where Peter asks about code reading from his
+interviewees. It tended to be unanimous amongst his interviewees that
+code reading is very beneficial. Still, while reading his interviews, it
+left a picture that even within those heavyweight programmers, the
+practice itself seemed to be lacking. Exception in this being Brad
+Fitzpatrick and, obviously, Donald Knuth. If these kinds of programmers
+speak for this practice but don&amp;rsquo;t do it in the wild, then who does? This
+overall, it seems pretty odd to me. Seibel made a great comparison
+regarding this when he compared programmers to novelists, where if
+novelist hasn&amp;rsquo;t ready anyone else&amp;rsquo;s publications, it would be unheard
+of.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve always enjoyed reading others&#39; source code mainly, let&amp;rsquo;s face it,
+to steal some ideas. But doing this, I&amp;rsquo;ve able to receive a long list of
+different lessons, ideas, and patterns, which I&amp;rsquo;ve been able to utilize
+frequently in most of the work that I&amp;rsquo;ve done after these revelations.&lt;/p&gt;
+&lt;h2 id=&#34;pattern-matching&#34;&gt;Pattern Matching&lt;/h2&gt;
+&lt;p&gt;One of the most significant benefits that I&amp;rsquo;ve learned while code
+reading is that you&amp;rsquo;re able to learn various patterns after a
+while. Sure, every project might seem cluttered and hard to understand
+for a while, but when you get the gist of it, you start to realize why
+this or that has been done the way it is. When you&amp;rsquo;ve understood some of
+these patterns, it gets much more comfortable to start noticing them in
+other similar or not so similar projects. Fundamentally this means the
+graph of WTF-per-seconds starts getting less and less.&lt;/p&gt;
+&lt;p&gt;I have also noticed that this kind of pattern matching helps understand
+the whole project under study itself. It would be best if you didn&amp;rsquo;t try
+to comprehend a large open-source project at once but in small
+pieces. When one of these pieces is understood, it can help tremendously
+in understanding the other pieces.&lt;/p&gt;
+&lt;h2 id=&#34;benefits-of-reinventing&#34;&gt;Benefits of reinventing&lt;/h2&gt;
+&lt;p&gt;Now, quite often, it can be pretty hard to understand the functionality
+of some part of a big program just by looking at the code. So quite
+often, to get a better grasp of foreign code is to reimplement the way
+you would write it. This way, you&amp;rsquo;re able to abstract the bread and
+butter out of the program and utilize it however you might want.&lt;/p&gt;
+&lt;p&gt;This kind of reimplementing can be quite hard on bigger projects. The
+best way to reinvent something in those projects is to change something
+and see changes in the new compilation. For example, try to change some
+text in some menu or output. This way, you can easily test how well you
+understand the foreign code.&lt;/p&gt;
+&lt;h2 id=&#34;code-as-a-literature-medium&#34;&gt;Code as a literature medium&lt;/h2&gt;
+&lt;p&gt;Many people tend to say that code is not literature because you read it
+differently than prose. In my opinion, this doesn&amp;rsquo;t necessarily need to
+be the case. Overall, code is written for humans first and then machine
+second. An excellent example of this is Robert C. Martin&amp;rsquo;s ravings, in
+which he often recites that the &amp;ldquo;code should read like prose to be
+clean&amp;rdquo;, which I tend to agree with. Another good one is Donald Knuth&amp;rsquo;s
+approach with literate programming. However, the latter one is more
+about embedding code pieces amidst what one could call
+prose. Nonetheless, this kind of system makes the code much more
+readable since the writing itself is such a big part.&lt;/p&gt;
+&lt;p&gt;One thing that I believe makes people think code is not literature is
+syntax highlighting. I don&amp;rsquo;t use it. For some reason, I never grow used
+to colored text. Of course, I might be a little bit biased, but when I
+turn on syntax highlighting, I tend to focus on the wrong things in the
+code, making it so that it doesn&amp;rsquo;t read like prose anymore. Removing
+syntax highlighting has allowed me to get a better grasp of the whole
+structure more easily. Is this true, or does it work for everyone? I
+don&amp;rsquo;t think so, but that&amp;rsquo;s how I feel.&lt;/p&gt;
+&lt;h2 id=&#34;code-reading-club&#34;&gt;Code Reading Club&lt;/h2&gt;
+&lt;p&gt;Based on these thoughts and Seibel&amp;rsquo;s ideas, I decided to give some sort
+of code reading club a try in my workplace. Initially, what I had in
+mind for this kind of club was choosing one library/program per
+week/month or whatever and then dissect the main logic behind it and
+discuss it. I quickly realized that this would most likely work since
+people have different interests in programming. For example, I don&amp;rsquo;t
+have an interest in various GUI applications or other frontend
+technologies, even though they might have some good ideas behind them.&lt;/p&gt;
+&lt;p&gt;So a much better approach would most likely be that person chooses one
+library/program and then dissects it sharing the findings to the rest of
+the group. This dissection done by someone else than yourself could
+easily inspire you and others to dive more deeply into the code itself,
+even though it might be a little bit outside your interests. That being
+said, exploring the world around your circles can be mind-opening since
+you can easily find new approaches to the same problems that you might
+face in your work.&lt;/p&gt;
+&lt;p&gt;I want to give this kind of approach a good try, and I could write some
+&amp;ldquo;deep thoughts&amp;rdquo; about it in the form of a review.&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Extravagancy in Tech</title>
       <link>https://topikettunen.com/posts/extravagancy-in-tech/</link>
