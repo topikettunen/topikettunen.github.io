@@ -59,12 +59,14 @@ pre {
 } 
 
 code {
-    display: inline-block;
-    font-family: monospace;
 }
 
 pre > code {
-    padding-left: 2em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
 }
 
 h2.sh {
@@ -126,7 +128,7 @@ p.copy {
 }
 
 blockquote {
-    margin: 10px;
+    /* margin: 10px; */
     border-left: 3px solid #eee;
     padding-left: 15px;
     color: #333;
