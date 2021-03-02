@@ -128,10 +128,15 @@ p.copy {
 }
 
 blockquote {
-    /* margin: 10px; */
     border-left: 3px solid #eee;
     padding-left: 15px;
     color: #333;
+    
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 main > div {
