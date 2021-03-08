@@ -199,10 +199,12 @@ footer > p {
 
 #paginator {
     text-align: center;
+    padding: 1em;
 }
 
 #view-more {
     text-align: center;
+    padding: 1em;
 }
 
 a {
