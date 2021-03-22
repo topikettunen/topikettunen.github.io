@@ -1,57 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://topikettunen.com/posts/arts-and-future/</loc>
-    <lastmod>2021-03-08T20:52:27+02:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://topikettunen.com/posts/</loc>
-    <lastmod>2021-03-08T20:52:27+02:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-22T18:28:53+02:00</lastmod>
+  </url><url>
+    <loc>https://topikettunen.com/posts/time-management-with-multiple-passions/</loc>
+    <lastmod>2021-03-22T18:28:53+02:00</lastmod>
+  </url><url>
     <loc>https://topikettunen.com/</loc>
+    <lastmod>2021-03-22T18:28:53+02:00</lastmod>
+  </url><url>
+    <loc>https://topikettunen.com/posts/arts-and-future/</loc>
     <lastmod>2021-03-08T20:52:27+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/posts/code-reading/</loc>
     <lastmod>2021-02-18T19:45:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/posts/extravagancy-in-tech/</loc>
     <lastmod>2021-02-16T17:16:56+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/posts/contemplating-web-analytics/</loc>
     <lastmod>2021-02-02T20:25:35+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/posts/leap-of-faith-in-email-providers/</loc>
     <lastmod>2021-01-24T13:35:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/posts/reawakening-long-lost-habit/</loc>
     <lastmod>2021-01-10T18:03:57+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://topikettunen.com/tags/</loc>
   </url>
-  
 </urlset>
